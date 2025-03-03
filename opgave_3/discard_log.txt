@@ -1,4 +1,3 @@
-Id not int in: customer_id,name,email,purchase_amount
 Id not int in: ,,,
 Id not int in: ,,,
 Id not int in: nan,Sandra,sandra.holt@hotmail.com,423.25

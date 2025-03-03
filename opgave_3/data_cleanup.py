@@ -1,8 +1,30 @@
 import re
-
-with open("opgave_3/source_data.csv", "r") as source:
-    with open("opgave_3/cleaned_data.csv", "w") as destination:
-        with open("opgave_3/discard_log.csv", "w") as discard:
+while True:
+    print("Specify source data path: ")
+    sourcePath = input()
+    try: f = open(sourcePath, "r")
+    except FileNotFoundError:
+        print("File not found")
+        continue
+    else:
+        f.close()
+        break
+while True:
+    print("Specify destination path: ")
+    destinationPath = input()
+    try:
+        f = open(destinationPath, "w")
+    except PermissionError:
+        print("You don't have permission to write here")
+        continue
+    else:
+        f.close()
+    break
+with open(sourcePath, "r") as source:
+    with open(destinationPath, "w") as destination:
+        with open("opgave_3/discard_log.txt", "w") as discard:
+            dataFormat = source.readline()
+            destination.write(dataFormat)
             while True:
                 line = source.readline()
                 if line == "":
@@ -37,7 +59,6 @@ with open("opgave_3/source_data.csv", "r") as source:
                     discard.write("Amount not a float in: " + line)
                     continue
                 destination.write(",".join(data))
-
                 
 
 
