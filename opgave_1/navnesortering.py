@@ -9,4 +9,9 @@ for letter in string.ascii_lowercase:
 for name in navneliste:
     for letter in name:
         letterFrequency[letter.lower()] += 1
-print(letterFrequency)
+with open("opgave_1/sorted_list.txt", "w") as f:
+    for navn in navneliste:
+        f.write(navn + ",")
+with open("opgave_1/letterFrequency.txt", "w") as f:
+    for letter in string.ascii_lowercase:
+        f.write(letter + ":" + str(letterFrequency[letter]) + ",")
