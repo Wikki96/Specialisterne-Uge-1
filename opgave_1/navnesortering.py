@@ -13,6 +13,6 @@ for name in navneliste:
 with open(os.path.join("opgave_1","sorted_list.txt"), "w") as f:
     for navn in navneliste:
         f.write(navn + ",")
-with open(os.path.join("opgave_1","letterFrequency.txt"), "w") as f:
+with open(os.path.join("opgave_1","letter_frequency.txt"), "w") as f:
     for letter in string.ascii_lowercase:
         f.write(letter + ":" + str(letterFrequency[letter]) + ",")
