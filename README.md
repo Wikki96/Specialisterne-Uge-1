@@ -1,6 +1,7 @@
 Opgave 1:
-Kør navnesorteing.py. Den tager Navne_liste.txt og skriver den sorteret i sorted_list.txt og bogstavsfrekvenserne i letter_frequency.txt. \n
+Kør navnesorteing.py. Den tager Navne_liste.txt og skriver den sorteret i sorted_list.txt og bogstavsfrekvenserne i letter_frequency.txt.
 Jeg ville have fortsat ved at lave de ekstra opgaver.
+
 Opgave 2:
 Kør logfile_analysis.py. Den uplukker warnings og errors fra app_log.txt og putter dem i hhv. warnings.txt og errors.txt.
 Jeg ville have fortsat opgaven ved at implementere en måde at specificere hvilke logs du ville sortere fra.
