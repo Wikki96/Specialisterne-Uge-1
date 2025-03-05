@@ -12,4 +12,6 @@ plotData = dataByHouseTypeAndRegion.mean("purchase_price")["purchase_price"]
 plotData = plotData.unstack()
 plotData.plot(kind= "bar")
 plotData.plot(kind= "bar", subplots=True, layout=(2,2))
+plt.subplots_adjust(bottom=0.5)
+plt.tight_layout()
 plt.show()

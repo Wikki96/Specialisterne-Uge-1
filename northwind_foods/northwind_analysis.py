@@ -7,5 +7,6 @@ df = pd.read_sql("SELECT * FROM orders AS o JOIN orderdetails AS od ON o.orderID
 df['TotalSales'] = df.UnitPrice * df.Quantity
 groupedData = df.groupby("ShipCountry")
 pricePerCountry = groupedData.sum("TotalSales")["TotalSales"]
-axes = pricePerCountry.plot(kind= "bar", subplots=True)
+pricePerCountry.plot(kind= "bar", subplots=True)
+plt.tight_layout()
 plt.show()
