@@ -1,6 +1,7 @@
-with open("opgave_2/app_log.txt", "r") as logFile:
-    with open("opgave_2/warnings.txt", "w") as warnings:
-        with open("opgave_2/errors.txt", "w") as errors:
+import os
+with open(os.path.join("opgave_2","app_log.txt"), "r") as logFile:
+    with open(os.path.join("opgave_2","warnings.txt"), "w") as warnings:
+        with open(os.path.join("opgave_2","errors.txt"), "w") as errors:
             while True:
                 line = logFile.readline()
                 if line == "":

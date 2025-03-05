@@ -1,7 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-data = pd.read_csv("opgave_4/DKHousingPricesSample100k.csv")
+data = pd.read_csv(os.path.join("opgave_4","DKHousingPricesSample100k.csv"))
 #print(data.head(10))
 dataByRegion = data.groupby("region")
 averagePurchasePriceByRegion = dataByRegion.mean("purchase_price")["purchase_price"]

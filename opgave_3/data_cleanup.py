@@ -1,4 +1,5 @@
 import re
+import os
 while True:
     print("Specify source data path: ")
     sourcePath = input()
@@ -22,7 +23,7 @@ while True:
     break
 with open(sourcePath, "r") as source:
     with open(destinationPath, "w") as destination:
-        with open("opgave_3/discard_log.txt", "w") as discard:
+        with open(os.path.join("opgave_3","discard_log.txt"), "w") as discard:
             dataFormat = source.readline()
             destination.write(dataFormat)
             while True:
