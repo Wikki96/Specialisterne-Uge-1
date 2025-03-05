@@ -1,0 +1,10 @@
+SELECT * FROM products ORDER BY UnitPrice DESC;
+SELECT * FROM customers WHERE country = "Spain" OR country = "UK";
+SELECT * FROM products WHERE UnitsInStock > 100 AND UnitPrice >= 25;
+SELECT shipcountry FROM orders GROUP BY shipcountry;
+SELECT * FROM orders WHERE YEAR(OrderDate) = 1996 AND MONTH(OrderDate) = 10;
+SELECT * FROM orders WHERE shipregion IS NULL AND Freight >= 100 AND EmployeeID = 1 AND ShipCountry = "Germany" AND YEAR(OrderDate) = 1996;
+SELECT * FROM orders WHERE ShippedDate > RequiredDate;
+SELECT * FROM orders WHERE YEAR(Orderdate) = 1997 AND MONTH(OrderDate) < 5 AND ShipCountry = "Canada";
+SELECT * FROM orders WHERE EmployeeID IN (2,5,8) AND ShipRegion IS NOT NULL AND ShipVia IN (1,3) ORDER BY EmployeeID, ShipVia ASC;
+SELECT * FROM employees WHERE (region IS NULL OR City IS NULL) AND YEAR(BirthDate) <= 1960;
