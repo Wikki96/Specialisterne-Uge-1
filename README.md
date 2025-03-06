@@ -14,3 +14,7 @@ Er der en måde at skrive koden på, når man har mange filer åbne, så man ikk
 Opgave 4:
 Kør pandasBasics.py.
 Det var svært at finde ud af at få plot til at virke ordentligt når der var multiindeks i den serie man får ud efter at have grupperet efter to ting
+
+Northwind Foods:
+ER-diagram.pdf indeholder ER diagrammet. uge3_opgave4.sql indeholder sql commandoerne fra del 2. For del 3 kør northwind_analysis.py og input dine credentials til MySQL i konsollen. 
+Jeg bøvlede lidt med at få SQLite3 til at virke - hvilket tilsyneladende ikke kan lade sig gøre. Jeg valgte så MySQL-connector, men det er ikke understøttet af pandas. Pandas foreslår selv SQAlchemy - jeg nåede ikke at se på om det virkede med MySQL.

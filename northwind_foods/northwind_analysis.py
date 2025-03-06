@@ -2,14 +2,14 @@ import mysql.connector
 import pandas as pd
 import matplotlib.pyplot as plt
 
-#print("Enter Mysql user")
-#user = input()
-#print("Enter database name")
-#db = input()
-#print("Enter password")
-#password = input()
+print("Enter Mysql user")
+user = input()
+print("Enter database name")
+db = input()
+print("Enter password")
+password = input()
 
-con = mysql.connector.connect(user="root", database="northwind", password="250303")
+con = mysql.connector.connect(user=user, database=db, password=password)
 orders = pd.read_sql("SELECT * FROM orders AS o JOIN orderdetails AS od ON o.orderID = od.orderID", con)
 orders['TotalSales'] = orders.UnitPrice * orders.Quantity
 dataByCountry = orders.groupby("ShipCountry")
